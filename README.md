@@ -6,6 +6,10 @@ Solve the Kata below using TDD. Complete it in Javascript or Python. Once done i
 
 ## Part 1
 
+![Ferry](https://upload.wikimedia.org/wikipedia/commons/d/d0/Robert_C._Lanier_ferry.jpg)
+[The Bolivar Gridge Ferry](https://en.wikipedia.org/wiki/Bolivar_Bridge)
+
+
 In an island country far far away there are lots of Ferries that allow people to travel easily by car between all the different islands of this country.
 
 This country's government would like to control the number of cars and people that can get onto a Ferry.
