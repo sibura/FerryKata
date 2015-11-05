@@ -16,7 +16,7 @@ This country's government would like to control the number of cars and people th
 
 To help them they need you to:
 
-* Create a `Car` class: each car instance has a **colour** and keeps track of the **number of passengers** in the car.
+* Create a `Car` class: the constructor should specify the **colour** and  the **number of passengers** in the car.
 
 * Create a `Ferry` class: the constructor should specify the **number of cars** allowed on the ferry and also **how many people** are allowed on the ferry.
 
