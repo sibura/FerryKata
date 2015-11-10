@@ -12,7 +12,7 @@ module.exports = function(cars_allowed, people_allowed){
 			return "Accepted";
 		}
 
-		 else (this.count_cars > this.count_people && car.passengers) 
+		 else (this.count_cars < this.count_people && car.passengers) 
 			return "Rejected";
 		};
 	};
