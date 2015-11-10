@@ -19,44 +19,45 @@ describe("should get the ferry", function(){
 	it("should return cars_allowed", function(){
 		var ferry = new Ferry(10, 50);
 		assert.equal(ferry.cars_allowed, 10);
-		//console.log(ferry.cars_allowed)
+	
 	});
 
 	it("should return people_allowed", function(){
 		var ferry = new Ferry(10, 50);
 		assert.equal(ferry.people_allowed, 50);
-		//console.log(ferry.people_allowed);
 	});
 });
 
 describe("should get max on Board", function(){
-	it("cars & people should accepted", function(){
+	it("cars & people should be on board", function(){
 
 		var ferry = new Ferry(10, 50);
 		var car = new Car("White", 1);
-		
+		var car1 = new Car("green", 20);
 
-		assert.equal(ferry.board(car));
+		console.log(ferry.board);
+		assert.equal(ferry.board(car), "Rejected");
+		assert.equal(ferry.board(car1), "Accepted");
 		console.log(ferry.board(car));	
 	});
-	it("cars & people should accepted", function(){
+	
+	it("Accepted cars & people should be on board", function(){
 
 		var ferry = new Ferry(10, 50);
-		var car = new Car("White", 1);
+		var car = new Car("yellow", 5);
 		
-
-		assert.equal((ferry.board), "accepted");
-		//console.log(ferry.board(car));	
+		assert.equal(ferry.board(car), "Accepted");
+		console.log(ferry.board(car));
+	
 	});
 
-	it("cars & people should reject", function(){
+	it("rejected cars & people should be on board", function(){
 
 		var ferry = new Ferry(10, 50);
-		var car = new Car("green", 55);
 		
-		assert.equal((ferry.car), "reject");
-		//console.log(ferry.board(car));	
+		var car3 = new Car("green", 55);
+		assert.equal(ferry.board(car3), "Accepted");
+		console.log(ferry.board(car3));
+			
 	});
-
-
 });
