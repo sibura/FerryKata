@@ -36,7 +36,7 @@ describe("should get max on Board", function(){
 		var car1 = new Car("green", 20);
 
 		console.log(ferry.board);
-		assert.equal(ferry.board(car), "Rejected");
+		assert.equal(ferry.board(car), "Accepted");
 		assert.equal(ferry.board(car1), "Accepted");
 		console.log(ferry.board(car));	
 	});
@@ -54,10 +54,10 @@ describe("should get max on Board", function(){
 	it("rejected cars & people should be on board", function(){
 
 		var ferry = new Ferry(10, 50);
-		
-		var car3 = new Car("green", 55);
-		assert.equal(ferry.board(car3), "Accepted");
-		console.log(ferry.board(car3));
+		var car = new Car("green", 55);
+
+		assert.equal(ferry.board(car), "Accepted");
+		console.log(ferry.board(car));
 			
 	});
 });

@@ -5,14 +5,13 @@ module.exports = function(cars_allowed, people_allowed){
 	this.count_people = 0;
 
 	this.board = function(car){
-		this.count_cars  ++;
-		this.count_people =  this.count_people + car.passengers;
-
-		if (this.count_cars < this.count_people && car.passengers) {
+		
+		if (this.count_cars <= this.cars_allowed && this.count_people <= this.people_allowed) {
+			this.count_cars++;
+			this.count_people =  this.count_people + car.passengers;
 			return "Accepted";
 		}
-
-		 else (this.count_cars < this.count_people && car.passengers) 
+		else 
 			return "Rejected";
-		};
 	};
+};
