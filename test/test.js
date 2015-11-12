@@ -45,19 +45,21 @@ describe("should get max on Board", function(){
 
 		var ferry = new Ferry(10, 50);
 		var car = new Car("yellow", 5);
+		var car = new Car("green", 55);
 		
 		assert.equal(ferry.board(car), "Accepted");
+		assert.equal(ferry.board(car), "Rejected");
 		console.log(ferry.board(car));
 	
 	});
 
-	it("rejected cars & people should be on board", function(){
+	// it("rejected cars & people should be on board", function(){
 
-		var ferry = new Ferry(10, 50);
-		var car = new Car("green", 55);
+	// 	var ferry = new Ferry(10, 50);
+	// 	var car = new Car("green", 55);
 
-		assert.equal(ferry.board(car), "Accepted");
-		console.log(ferry.board(car));
+	// 	assert.equal(ferry.board(car), "Accepted");
+	// 	console.log(ferry.board(car));
 			
-	});
+	// });
 });
